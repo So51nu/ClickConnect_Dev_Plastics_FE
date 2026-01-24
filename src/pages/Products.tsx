@@ -1127,8 +1127,7 @@ const PRODUCTS: Product[] = [
     image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=1200",
     gallery: [
       "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1581092162387-80497e3c1c8e?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1581092160560-1c1e428e9d65?auto=format&fit=crop&q=80&w=1600",
+      
     ],
   },
   {

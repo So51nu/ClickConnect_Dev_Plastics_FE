@@ -990,7 +990,7 @@ export default function ContactUs() {
 
   // ✅ IMPORTANT: Use env for API base (works on dev + prod)
   // If you want fixed local only, keep "http://127.0.0.1:8000"
-  const API_BASE = (import.meta as any)?.env?.VITE_API_BASE || "http://127.0.0.1:8000";
+  const API_BASE = (import.meta as any)?.env?.VITE_API_BASE || "https://backend.devplastic.in";
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

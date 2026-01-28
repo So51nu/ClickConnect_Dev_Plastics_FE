@@ -1237,6 +1237,22 @@ export default function ContactUs() {
             --section-pad: 72px 14px;
           }
         }
+          /* ✅ FORCE INPUT & TEXTAREA VISIBILITY */
+.input,
+input,
+textarea {
+  color: #111 !important;
+  caret-color: #111 !important;
+  background: #fff;
+}
+
+.input::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: #888 !important;
+  opacity: 1;
+}
+
       `}} />
 
       {/* TOP BAR */}

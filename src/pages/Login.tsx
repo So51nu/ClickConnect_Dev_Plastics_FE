@@ -506,6 +506,9 @@ const input: React.CSSProperties = {
   transition: "border-color 0.2s",
   boxSizing: "border-box",
   background: "#fff",
+  color: "#111",
+  caretColor: "#111",
+
 };
 
 const btn: React.CSSProperties = {

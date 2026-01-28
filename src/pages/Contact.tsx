@@ -959,9 +959,10 @@ function RotatingBgSection({
 // ── CONTACT US PAGE (UI matched to your About) ──────────────────────────────
 export default function ContactUs() {
   const heroImages = [
-    "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=1920",
-    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920",
-    "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=1920"
+    "src/ai_images/im31.jpg",
+    "src/ai_images/img34.jpg",
+    "src/ai_images/img41.png",
+    "src/ai_images/img44.png",
   ];
 
   const facilityBg = [
@@ -1252,13 +1253,13 @@ export default function ContactUs() {
       }}>
         <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
           <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <MapPin size={14} color={COLORS.gold} /> Sector 4, Mumbai
+            <MapPin size={14} color={COLORS.gold} /> 46,appa pada,,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai
           </span>
           <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <Mail size={14} color={COLORS.gold} /> info@devplastics.com
           </span>
           <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <Phone size={14} color={COLORS.gold} /> +91 98765 43210
+            <Phone size={14} color={COLORS.gold} /> +91 8043887774
           </span>
         </div>
         <div style={{ display: "flex", gap: "12px" }}>
@@ -1284,21 +1285,25 @@ export default function ContactUs() {
         gap: 12,
         flexWrap: "wrap"
       }}>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <span style={{ fontSize: '28px', fontWeight: '800', lineHeight: 1 }}>
-            DEV<span className="text-gold">PLASTICS</span>
-          </span>
-          <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#888' }}>
-            COMPANY
-          </span>
-        </div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "100px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
+
 
         <div className="nav-links-desktop" style={{ display: "flex", gap: "25px", fontSize: "13px", fontWeight: "700", textTransform: "uppercase", alignItems: "center" }}>
           <Link to="/" className="text-gold nav-link" style={{ textDecoration: "none" }}>Home</Link>
           <Link to="/products" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Products</Link>
           <Link to="/services" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Services</Link>
           <Link to="/about" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>About</Link>
-          <Link to="/gallery" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Gallery</Link>
+          {/* <Link to="/gallery" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Gallery</Link> */}
           <Link to="/contact" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Contact</Link>
           <Search size={18} style={{ cursor: 'pointer' }} />
         </div>
@@ -1360,14 +1365,18 @@ export default function ContactUs() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="mobile-drawer-header">
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <span style={{ fontSize: '20px', fontWeight: '900', lineHeight: 1 }}>
-                    DEV<span style={{ color: COLORS.gold }}>PLASTICS</span>
-                  </span>
-                  <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#888' }}>
-                    COMPANY
-                  </span>
-                </div>
+                <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "100px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
+
 
                 <button className="mobile-close-btn" aria-label="Close menu" onClick={closeMobileMenu}>
                   <X size={18} />
@@ -1379,7 +1388,7 @@ export default function ContactUs() {
                 <Link to="/products" onClick={closeMobileMenu}>Products</Link>
                 <Link to="/services" onClick={closeMobileMenu}>Services</Link>
                 <Link to="/about" onClick={closeMobileMenu}>About</Link>
-                <Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link>
+                {/* <Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link> */}
                 <Link to="/contact" className="active" onClick={closeMobileMenu}>Contact</Link>
               </div>
 
@@ -1489,10 +1498,10 @@ export default function ContactUs() {
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18, marginTop: 34 }}>
-              <MiniInfo icon={<Phone size={16} color={COLORS.gold} />} title="Call" value="+91 98765 43210" />
+              <MiniInfo icon={<Phone size={16} color={COLORS.gold} />} title="Call" value="+91 8043887774" />
               <MiniInfo icon={<Mail size={16} color={COLORS.gold} />} title="Email" value="info@devplastics.com" />
               <MiniInfo icon={<Clock size={16} color={COLORS.gold} />} title="Hours" value="Mon–Sat: 9 AM – 7 PM" />
-              <MiniInfo icon={<MapPin size={16} color={COLORS.gold} />} title="Location" value="Mumbai - 400072" />
+              <MiniInfo icon={<MapPin size={16} color={COLORS.gold} />} title="Location" value="46,appa pada,,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai-400097, Maharashtra, India" />
             </div>
           </motion.div>
 
@@ -1504,7 +1513,7 @@ export default function ContactUs() {
             style={{ position: "relative" }}
           >
             <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=900"
+              src="src/ai_images/img.png"
               alt="Facility"
               style={{ width: "100%", borderRadius: "12px", boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
             />
@@ -1539,8 +1548,8 @@ export default function ContactUs() {
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "24px", maxWidth: 1200, margin: "0 auto" }}>
-          <CardBox icon={<Building2 size={22} color={COLORS.gold} />} title="Address" text="Sector 4, Industrial Area, Mumbai - 400072" />
-          <CardBox icon={<Phone size={22} color={COLORS.gold} />} title="Phone" text="+91 98765 43210 / +91 98765 43211" />
+          <CardBox icon={<Building2 size={22} color={COLORS.gold} />} title="Address" text="46,appa pada,,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai-400097, Maharashtra, India" />
+          <CardBox icon={<Phone size={22} color={COLORS.gold} />} title="Phone" text="+91 8043887774" />
           <CardBox icon={<Mail size={22} color={COLORS.gold} />} title="Email" text="info@devplastics.com / sales@devplastics.com" />
           <CardBox icon={<Clock size={22} color={COLORS.gold} />} title="Working Hours" text="Mon - Sat: 9:00 AM - 7:00 PM (Sun Closed)" />
         </div>
@@ -1743,7 +1752,7 @@ export default function ContactUs() {
             <div style={{ padding: 20, color: "#222" }}>
               <div style={{ fontWeight: 900, marginBottom: 6 }}>Dev Plastics Facility</div>
               <div style={{ color: COLORS.lightText, fontSize: 14, lineHeight: 1.7 }}>
-                Sector 4, Industrial Area, Mumbai - 400072
+                46,appa pada,,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai-400097, Maharashtra, India
               </div>
             </div>
           </div>
@@ -1799,14 +1808,18 @@ export default function ContactUs() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "50px", marginBottom: "60px" }}>
             <div>
-              <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '20px' }}>
-                <span style={{ fontSize: '32px', fontWeight: '800', color: 'white' }}>
-                  DEV<span className="text-gold">PLASTICS</span>
-                </span>
-                <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', color: '#888' }}>
-                  COMPANY
-                </span>
-              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "100px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
+
               <p style={{ lineHeight: 1.7, marginBottom: '20px' }}>
                 Precision plastic fabrication solutions for industrial, commercial, and architectural applications.
               </p>
@@ -1822,8 +1835,9 @@ export default function ContactUs() {
               <h4 style={{ color: 'white', fontSize: '16px', marginBottom: '20px', fontWeight: '700' }}>Quick Links</h4>
               <ul style={{ listStyle: "none", padding: 0 }}>
                 <li style={{ marginBottom: "12px" }}><Link to="/" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Home</Link></li>
-                <li style={{ marginBottom: "12px" }}><Link to="/products" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Products</Link></li>
-                <li style={{ marginBottom: "12px" }}><Link to="/services" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Services</Link></li>
+                <li style={{ marginBottom: "12px" }}><Link to="/products" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Services</Link></li>
+                <li style={{ marginBottom: "12px" }}><Link to="/gallery" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Gallery</Link></li>
+                {/* <li style={{ marginBottom: "12px" }}><Link to="/services" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Services</Link></li> */}
                 <li><Link to="/contact" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Contact</Link></li>
               </ul>
             </div>
@@ -1831,8 +1845,8 @@ export default function ContactUs() {
             <div>
               <h4 style={{ color: 'white', fontSize: '16px', marginBottom: '20px', fontWeight: '700' }}>Contact Info</h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><MapPin size={16} color={COLORS.gold} /><span>Sector 4, Industrial Area, Mumbai - 400072</span></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><Phone size={16} color={COLORS.gold} /><span>+91 98765 43210</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><MapPin size={16} color={COLORS.gold} /><span>46,appa pada,,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai-400097, Maharashtra, India</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><Phone size={16} color={COLORS.gold} /><span>+91 8043887774</span></div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><Mail size={16} color={COLORS.gold} /><span>info@devplastics.com</span></div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><Clock size={16} color={COLORS.gold} /><span>Mon-Sat: 9:00 AM - 7:00 PM</span></div>
               </div>

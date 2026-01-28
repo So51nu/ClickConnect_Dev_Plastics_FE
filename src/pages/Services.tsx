@@ -1132,7 +1132,7 @@ export default function Services() {
           <Link to="/products" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Products</Link>
           <Link to="/services" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Services</Link>
           <Link to="/about" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>About</Link>
-          <Link to="/gallery" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Gallery</Link>
+          {/* <Link to="/gallery" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Gallery</Link> */}
           <Link to="/contact" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Contact</Link>
           <Search size={18} style={{ cursor: 'pointer' }} />
         </div>
@@ -1209,7 +1209,7 @@ export default function Services() {
                 <Link to="/products" onClick={closeMobileMenu}>Products</Link>
                 <Link to="/services" className="active" onClick={closeMobileMenu}>Services</Link>
                 <Link to="/about" onClick={closeMobileMenu}>About</Link>
-                <Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link>
+                {/* <Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link> */}
                 <Link to="/contact" onClick={closeMobileMenu}>Contact</Link>
               </div>
 
@@ -1396,7 +1396,7 @@ export default function Services() {
                     </span>
                   ))}
                 </div>
-                <a href="#" style={{
+                {/* <a href="#" style={{
                   color: COLORS.gold,
                   fontWeight: "600",
                   display: "inline-flex",
@@ -1405,7 +1405,7 @@ export default function Services() {
                   textDecoration: "none"
                 }}>
                   Learn More <ChevronRight size={16} />
-                </a>
+                </a> */}
               </div>
             </motion.div>
           ))}
@@ -1640,10 +1640,18 @@ export default function Services() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "50px", marginBottom: "60px" }}>
             <div>
-              <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '20px' }}>
-                <span style={{ fontSize: '32px', fontWeight: '800', color: 'white' }}>DEV<span className="text-gold">PLASTICS</span></span>
-                <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', color: '#888' }}> Company</span>
-              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "48px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
+
               <p style={{ lineHeight: 1.7, marginBottom: '20px' }}>
                 Specializing in custom plastic fabrication, FRP solutions, and industrial plastic components with precision and quality.
               </p>

@@ -1814,7 +1814,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin,
   Search, X, ChevronLeft, ChevronRight, Maximize2, Filter,
-  Factory, Shield, Layers, Wrench, Settings, Building,
   Download, Share2, Heart
 } from 'lucide-react';
 
@@ -1853,96 +1852,367 @@ type GalleryImage = {
 const galleryImages: GalleryImage[] = [
   {
     id: 1,
-    title: 'FRP Industrial Cladding',
-    category: 'FRP',
-    description: 'High-strength FRP panels installed at chemical plant',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
+    title: 'PP FRP Storage Tank',
+    category: 'PP',
+    description: '',
+    image: 'src/gall/img1.webp',
     tags: ['FRP', 'Cladding', 'Industrial']
   },
   {
     id: 2,
-    title: 'Custom Plastic Components',
-    category: 'Custom',
-    description: 'Precision-machined plastic parts for machinery',
-    image: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=800',
+    title: 'FRP Storage Tank',
+    category: 'FRP',
+    description: '',
+    image: 'src/gall/img2.webp',
     tags: ['Custom', 'Machining', 'Precision']
   },
   {
     id: 3,
-    title: 'Factory Installation',
-    category: 'Installation',
-    description: 'Complete FRP wall panel installation at manufacturing unit',
-    image: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=800',
+    title: 'PP FRP Storage Tank',
+    category: 'PP FRP',
+    description: '',
+    image: 'src/gall/img3.jpg',
     tags: ['Installation', 'Factory', 'FRP']
   },
   {
     id: 6,
-    title: 'Industrial Tank Covers',
+    title: 'Underground FRP Storage Tank',
     category: 'Industrial',
     description: 'Custom FRP covers for industrial storage tanks',
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800',
+    image: 'src/gall/img4.webp',
     tags: ['Industrial', 'Tanks', 'Covers']
   },
   {
     id: 7,
-    title: 'Architectural FRP Elements',
-    category: 'FRP',
+    title: 'PP FRP Blowers',
+    category: 'PP FRP',
     description: 'Architectural FRP elements for building facade',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800',
+    image: 'src/gall/img5.webp',
+    tags: ['Architectural', 'FRP', 'Facade']
+  },
+  {
+    id: 7,
+    title: 'PP FRP Blowers',
+    category: 'PP FRP',
+    description: 'Architectural FRP elements for building facade',
+    image: 'src/gall/img6.jpg',
     tags: ['Architectural', 'FRP', 'Facade']
   },
   {
     id: 8,
-    title: 'CNC Machining Process',
+    title: 'PP FRP Scrubber System',
     category: 'Custom',
-    description: 'CNC machining of plastic components in our facility',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800',
+    description: '',
+    image: 'src/gall/img6.webp',
     tags: ['CNC', 'Machining', 'Process']
   },
   {
     id: 9,
-    title: 'Clean Room Installation',
+    title: 'PP Tank For Acid storage',
     category: 'Installation',
-    description: 'Hygienic plastic panels for pharmaceutical clean room',
-    image: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=800',
+    description: '',
+    image: 'src/gall/img7.webp',
+    tags: ['Clean Room', 'Pharma', 'Hygienic']
+  },
+   {
+    id: 9,
+    title: 'PP Tank For Acid storage',
+    category: 'Installation',
+    description: '',
+    image: 'src/gall/img8.webp',
+    tags: ['Clean Room', 'Pharma', 'Hygienic']
+  },
+   {
+    id: 9,
+    title: 'PP Tank For Acid storage',
+    category: 'Installation',
+    description: '',
+    image: 'src/gall/img9.webp',
+    tags: ['Clean Room', 'Pharma', 'Hygienic']
+  },
+   {
+    id: 9,
+    title: 'PP Tank For Acid storage',
+    category: 'Installation',
+    description: '',
+    image: 'src/gall/imh10.jpeg',
+    tags: ['Clean Room', 'Pharma', 'Hygienic']
+  },
+   {
+    id: 9,
+    title: 'Polypropylene Acid storage tank/chemical storage',
+    category: 'Installation',
+    description: '',
+    image: 'src/gall/img11.webp',
+    tags: ['Clean Room', 'Pharma', 'Hygienic']
+  },
+  {
+    id: 9,
+    title: 'Polypropylene Acid storage tank/chemical storage',
+    category: 'Installation',
+    description: '',
+    image: 'src/gall/img12.webp',
+    tags: ['Clean Room', 'Pharma', 'Hygienic']
+  },
+  {
+    id: 9,
+    title: 'Polypropylene Acid storage tank/chemical storage',
+    category: 'Installation',
+    description: '',
+    image: 'src/gall/img13.webp',
+    tags: ['Clean Room', 'Pharma', 'Hygienic']
+  },
+  {
+    id: 9,
+    title: 'Polypropylene Acid storage tank/chemical storage',
+    category: 'Installation',
+    description: '',
+    image: 'src/gall/img14.webp',
     tags: ['Clean Room', 'Pharma', 'Hygienic']
   },
   {
     id: 10,
-    title: 'Retail Store Displays',
+    title: 'PP FRP Tanks',
     category: 'Commercial',
-    description: 'Custom plastic displays for retail store',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
+    description: '',
+    image: 'src/gall/img15.webp',
     tags: ['Retail', 'Displays', 'Commercial']
   },
   {
     id: 11,
-    title: 'FRP Roofing Sheets',
+    title: 'PP FRP Chemicals/Oils Kems Electroplating',
     category: 'FRP',
-    description: 'Installation of corrosion-resistant FRP roofing',
-    image: 'src/images/image1.jpg',
+    description: '',
+    image: 'src/gall/img16.webp',
     tags: ['Roofing', 'FRP', 'Corrosion-resistant']
   },
   {
     id: 12,
-    title: 'Warehouse Partitioning',
+    title: 'FRP Chemical Storage Tanks',
     category: 'Industrial',
-    description: 'Industrial-grade plastic partitions for warehouse',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800',
+    description: '',
+    image: 'src/gall/img17.webp',
     tags: ['Warehouse', 'Partitions', 'Industrial']
-  }
+  },
+
+
+
+  {
+    id: 12,
+    title: 'PP FRP Exhaust Blowers',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/img18.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  {
+    id: 12,
+    title: 'PP FRP Blower',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/img19.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  {
+    id: 12,
+    title: 'PP FRP Centrifugal Blowers',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/img20.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+
+  {
+    id: 12,
+    title: 'Fiber Reinforced Plastic Storage Tanks',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/21.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+
+  {
+    id: 12,
+    title: 'PP Tank Chemical Electroplating',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/22.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+
+  {
+    id: 12,
+    title: 'PP FRP ETP Plant',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/23.jpg',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+
+  {
+    id: 12,
+    title: 'Polypropylene Storage Tanks',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/24.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+
+  {
+    id: 12,
+    title: 'PP FRP Sulfuric Acid Storage Tank',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/25.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+
+  {
+    id: 12,
+    title: 'Polypropylene Barrel used for Electroplating Tank',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/1.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  {
+    id: 12,
+    title: 'Frp Tanks',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/2.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  
+  {
+    id: 12,
+    title: 'Frp Tanks',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/3.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  
+  {
+    id: 12,
+    title: 'Frp Tanks',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/4.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  
+  {
+    id: 12,
+    title: 'FRP Ducting',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/5.jpg',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  
+  {
+    id: 12,
+    title: 'Pp FRP Impeller',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/6.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  
+  {
+    id: 12,
+    title: 'Pollypropylene Magnetic Pump chemical filter',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/7.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  
+  {
+    id: 12,
+    title: 'Pollypropylene Magnetic Pump chemica',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/8.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  
+  {
+    id: 12,
+    title: 'Laboratory Hoods',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/9.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  
+  {
+    id: 12,
+    title: 'FRP Coating',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/10.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  
+  {
+    id: 12,
+    title: 'PP Vertical Pump',
+    category: 'Industrial',
+    description: '',
+    image: 'src/gall/11.webp',
+    tags: ['Warehouse', 'Partitions', 'Industrial']
+  },
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // Gallery categories (counts are shown as UI only; filter uses selectedCategory)
-const categories = [
-  { id: 'All', name: 'All Projects', count: 12, icon: <Maximize2 size={18} /> },
-  { id: 'FRP', name: 'FRP Fabrication', count: 3, icon: <Layers size={18} /> },
-  { id: 'Industrial', name: 'Industrial', count: 2, icon: <Factory size={18} /> },
-  { id: 'Commercial', name: 'Commercial', count: 2, icon: <Building size={18} /> },
-  { id: 'Custom', name: 'Custom Parts', count: 2, icon: <Settings size={18} /> },
-  { id: 'Installation', name: 'Installation', count: 2, icon: <Wrench size={18} /> },
-  { id: 'Quality', name: 'Quality Control', count: 1, icon: <Shield size={18} /> }
-];
+// const categories = [
+//   { id: 'All', name: 'All Projects', count: 12, icon: <Maximize2 size={18} /> },
+//   { id: 'FRP', name: 'FRP Fabrication', count: 3, icon: <Layers size={18} /> },
+//   { id: 'Industrial', name: 'Industrial', count: 2, icon: <Factory size={18} /> },
+//   { id: 'Commercial', name: 'Commercial', count: 2, icon: <Building size={18} /> },
+//   { id: 'Custom', name: 'Custom Parts', count: 2, icon: <Settings size={18} /> },
+//   { id: 'Installation', name: 'Installation', count: 2, icon: <Wrench size={18} /> },
+//   { id: 'Quality', name: 'Quality Control', count: 1, icon: <Shield size={18} /> }
+// ];
 
 // ── GALLERY PAGE ────────────────────────────────────────────────────────────
 export default function Gallery() {
@@ -2299,13 +2569,13 @@ export default function Gallery() {
       }}>
         <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
           <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <MapPin size={14} color={COLORS.gold} /> Sector 4, Mumbai
+            <MapPin size={14} color={COLORS.gold} /> 46,appa pada,,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai-400097, Maharashtra, India
           </span>
           <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <Mail size={14} color={COLORS.gold} /> info@devplastics.com
           </span>
           <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <Phone size={14} color={COLORS.gold} /> +91 98765 43210
+            <Phone size={14} color={COLORS.gold} /> +91 8043887774
           </span>
         </div>
         <div style={{ display: "flex", gap: "12px" }}>
@@ -2331,19 +2601,23 @@ export default function Gallery() {
         gap: 12,
         flexWrap: "wrap"
       }}>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <span style={{ fontSize: '28px', fontWeight: '800', lineHeight: 1 }}>
-            DEV<span className="text-gold">PLASTICS</span>
-          </span>
-          <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#888' }}>
-            Company
-          </span>
-        </div>
+       <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "100px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
+
 
         <div className="nav-links-desktop" style={{ display: "flex", gap: "25px", fontSize: "13px", fontWeight: "700", textTransform: "uppercase", alignItems: "center" }}>
           <Link to="/" className="text-gold nav-link" style={{ textDecoration: "none" }}>Home</Link>
-          <Link to="/products" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Products</Link>
-          <Link to="/services" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Services</Link>
+          <Link to="/products" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Services</Link>
+          {/* <Link to="/services" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Services</Link> */}
           <Link to="/about" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>About</Link>
           <Link to="/gallery" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Gallery</Link>
           <Link to="/contact" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>Contact</Link>
@@ -2403,14 +2677,18 @@ export default function Gallery() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="mobile-drawer-header">
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <span style={{ fontSize: '20px', fontWeight: '900', lineHeight: 1 }}>
-                    DEV<span style={{ color: COLORS.gold }}>PLASTICS</span>
-                  </span>
-                  <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#888' }}>
-                    Company
-                  </span>
-                </div>
+                <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "100px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
+
 
                 <button className="mobile-close-btn" aria-label="Close menu" onClick={closeMobileMenu}>
                   <X size={18} />
@@ -2419,8 +2697,8 @@ export default function Gallery() {
 
               <div className="mobile-nav">
                 <Link to="/" onClick={closeMobileMenu}>Home</Link>
-                <Link to="/products" onClick={closeMobileMenu}>Products</Link>
-                <Link to="/services" onClick={closeMobileMenu}>Services</Link>
+                <Link to="/products" onClick={closeMobileMenu}>Services</Link>
+                {/* <Link to="/services" onClick={closeMobileMenu}>Services</Link> */}
                 <Link to="/about" onClick={closeMobileMenu}>About</Link>
                 <Link to="/gallery" className="active" onClick={closeMobileMenu}>Gallery</Link>
                 <Link to="/contact" onClick={closeMobileMenu}>Contact</Link>
@@ -2512,12 +2790,12 @@ export default function Gallery() {
             Our Work Gallery
           </p>
           <h1 style={{ fontSize: '56px', fontWeight: '800', lineHeight: '1.1', marginBottom: '25px' }}>
-            Project <span className="text-gold">Gallery</span>
+            Dev Plastics <span className="text-gold">Gallery</span>
           </h1>
           <p style={{ fontSize: '18px', marginBottom: '35px', opacity: 0.9, maxWidth: '600px', margin: '0 auto' }}>
             Explore our plastic fabrication projects across industries. Click on any image to view details.
           </p>
-          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          {/* <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <button style={{
               backgroundColor: COLORS.gold,
               border: `1px solid ${COLORS.gold}`,
@@ -2546,12 +2824,12 @@ export default function Gallery() {
             }} className="btn-hover">
               Download Brochure
             </button>
-          </div>
+          </div> */}
         </motion.div>
       </header>
 
       {/* FILTER CATEGORIES */}
-      <section style={{ padding: "60px 5%", backgroundColor: COLORS.bgLight }}>
+      {/* <section style={{ padding: "60px 5%", backgroundColor: COLORS.bgLight }}>
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <span style={{ color: COLORS.gold, fontSize: "14px", letterSpacing: "3px", textTransform: "uppercase", fontWeight: "600" }}>
             Categories
@@ -2606,7 +2884,7 @@ export default function Gallery() {
             </button>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* GALLERY GRID */}
       <section style={{ padding: "40px 5%", backgroundColor: COLORS.white }}>
@@ -2962,10 +3240,18 @@ export default function Gallery() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "50px", marginBottom: "60px" }}>
             <div>
-              <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '20px' }}>
-                <span style={{ fontSize: '32px', fontWeight: '800', color: 'white' }}>DEV<span className="text-gold">PLASTICS</span></span>
-                <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', color: '#888' }}> Company</span>
-              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "100px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
+
               <p style={{ lineHeight: 1.7, marginBottom: '20px' }}>
                 Explore our gallery of plastic fabrication projects across various industries and applications.
               </p>
@@ -2981,9 +3267,10 @@ export default function Gallery() {
               <h4 style={{ color: 'white', fontSize: '16px', marginBottom: '20px', fontWeight: '700' }}>Quick Links</h4>
               <ul style={{ listStyle: "none", padding: 0 }}>
                 <li style={{ marginBottom: "12px" }}><Link to="/" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Home</Link></li>
-                <li style={{ marginBottom: "12px" }}><Link to="/products" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Products</Link></li>
-                <li style={{ marginBottom: "12px" }}><Link to="/services" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Services</Link></li>
+                <li style={{ marginBottom: "12px" }}><Link to="/products" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Services</Link></li>
+                {/* <li style={{ marginBottom: "12px" }}><Link to="/services" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Services</Link></li> */}
                 <li><Link to="/contact" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Contact</Link></li>
+                <li><Link to="/gallery" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>Gallery</Link></li>
               </ul>
             </div>
 
@@ -3001,8 +3288,8 @@ export default function Gallery() {
             <div>
               <h4 style={{ color: 'white', fontSize: '16px', marginBottom: '20px', fontWeight: '700' }}>Contact Info</h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><MapPin size={16} color={COLORS.gold} /><span>Sector 4, Industrial Area, Mumbai - 400072</span></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><Phone size={16} color={COLORS.gold} /><span>+91 98765 43210</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><MapPin size={16} color={COLORS.gold} /><span>46,appa pada,,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai-400097, Maharashtra, India</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><Phone size={16} color={COLORS.gold} /><span>+91 8043887774</span></div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><Mail size={16} color={COLORS.gold} /><span>info@devplastics.com</span></div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><Maximize2 size={16} color={COLORS.gold} /><span>Gallery Updated Monthly</span></div>
               </div>

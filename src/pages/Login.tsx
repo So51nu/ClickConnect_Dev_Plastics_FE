@@ -280,19 +280,23 @@ export default function Login() {
           flexWrap: "wrap",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <span style={{ fontSize: "28px", fontWeight: "800", lineHeight: 1 }}>
-            DEV<span className="text-gold">PLASTICS</span>
-          </span>
-          <span style={{ fontSize: "9px", letterSpacing: "3px", textTransform: "uppercase", color: "#888" }}>
-            Company
-          </span>
-        </div>
+       <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "100px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
+
 
         <div className="nav-links-desktop" style={{ display: "flex", gap: "25px", fontSize: "13px", fontWeight: "700", textTransform: "uppercase", alignItems: "center" }}>
           <Link to="/" style={navLink}>Home</Link>
-          <Link to="/products" style={navLink}>Products</Link>
-          <Link to="/services" style={navLink}>Services</Link>
+          <Link to="/products" style={navLink}>Services</Link>
+          
           <Link to="/about" style={navLink}>About</Link>
           <Link to="/gallery" style={navLink}>Gallery</Link>
           <Link to="/contact" style={navLink}>Contact</Link>
@@ -357,10 +361,18 @@ export default function Login() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "50px", marginBottom: "60px" }}>
             <div>
-              <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '20px' }}>
-                <span style={{ fontSize: '32px', fontWeight: '800', color: 'white' }}>DEV<span style={{ color: COLORS.gold }}>PLASTICS</span></span>
-                <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', color: '#888' }}>Company</span>
-              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "100px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
+
               <p style={{ lineHeight: 1.7, marginBottom: '20px' }}>
                 Admin login page for managing contact inquiries.
               </p>
@@ -377,7 +389,7 @@ export default function Login() {
               <ul style={{ listStyle: "none", padding: 0 }}>
                 <li style={{ marginBottom: "12px" }}><Link to="/" style={footerLink}>Home</Link></li>
                 <li style={{ marginBottom: "12px" }}><Link to="/contact" style={footerLink}>Contact</Link></li>
-                <li style={{ marginBottom: "12px" }}><Link to="/services" style={footerLink}>Services</Link></li>
+                <li style={{ marginBottom: "12px" }}><Link to="/gallery" style={footerLink}>Gallery</Link></li>
                 <li><Link to="/products" style={footerLink}>Products</Link></li>
               </ul>
             </div>

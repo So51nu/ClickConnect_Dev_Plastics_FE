@@ -960,8 +960,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
-  Filter,
-  ChevronRight,
   X,
   CheckCircle,
   Phone,
@@ -1031,187 +1029,641 @@ type Product = {
 };
 
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=1920",
-  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920",
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1920",
-  "https://images.unsplash.com/photo-1581092160560-1c1e428e9d65?auto=format&fit=crop&q=80&w=1920",
+  "src/ai_images/img42.png",
+  "src/ai_images/img35.jpg",
+  "src/ai_images/img21.avif",
 ];
 
-const CATEGORIES = [
-  "All",
-  "FRP / GRP",
-  "PVC / Clean Room",
-  "Polycarbonate",
-  "Acrylic",
-  "Custom Fabrication",
-];
+// const CATEGORIES = [
+//   "All",
+//   "FRP / GRP",
+//   "PVC / Clean Room",
+//   "Polycarbonate",
+//   "Acrylic",
+//   "Custom Fabrication",
+// ];
 
 const PRODUCTS: Product[] = [
+  
   {
-    id: "frp-panels",
-    title: "FRP Sheets & Panels",
-    category: "FRP / GRP",
-    short: "Corrosion resistant panels for industrial cladding, partitions & interiors.",
+    id: "grp-architectural",
+    title: "Storage Tank",
+    category: "FRP / PP",
+    short: "We are a leading Manufacturer of PP FRP Storage Tank, FRP Storage Tank and Underground FRP Storage Tank from Mumbai, India.",
     description:
-      "High-performance Fiber Reinforced Plastic (FRP) sheets and panels engineered for durability, chemical resistance and long life. Ideal for industrial cladding, clean areas, and high-humidity environments.",
+      "",
     features: [
-      "Excellent corrosion & chemical resistance",
-      "Lightweight yet strong",
-      "Easy installation & low maintenance",
-      "Hygienic surface options available",
+      ""
     ],
     specs: [
-      { label: "Thickness", value: "2mm – 12mm (custom)" },
-      { label: "Finish", value: "Matte / Gloss / Textured" },
-      { label: "Color", value: "Custom RAL/solid colors" },
-      { label: "Fire Retardant", value: "Optional (as per requirement)" },
+      
     ],
-    useCases: ["Factory wall cladding", "Chemical areas", "Partitions", "Wash areas"],
-    badges: ["ISO Process", "Corrosion Resistant", "Custom Colors"],
-    image: "src/images/img.png",
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/sto1.webp",
     gallery: [
-      "https://m.media-amazon.com/images/I/81NNHTUMlsL.jpg",
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=1600",
+      "src/coimages/sto2.webp",
+      "src/coimages/sto3.webp",
+      "src/coimages/sto4.webp",
     ],
   },
   {
     id: "grp-architectural",
-    title: "GRP / FRP Architectural Panels",
-    category: "FRP / GRP",
-    short: "Facade, cladding and architectural finishes with premium textures & colors.",
+    title: "FRP Blowers",
+    category: " PP FRP",
+    short: "Prominent & Leading Manufacturer from Mumbai, we offer PP FRP Blowers and PP FRP Blower.",
     description:
-      "Architectural grade GRP/FRP panels designed for modern facades, decorative cladding and interior feature applications. Available in custom colors, textures and profiles.",
+      "",
     features: [
-      "Premium finish options",
-      "Custom textures & patterns",
-      "Weather & UV tolerant options",
-      "Easy to install modular design",
+      ""
     ],
     specs: [
-      { label: "Texture", value: "Stone / Wood / Custom" },
-      { label: "Module Size", value: "Custom (project-based)" },
-      { label: "UV Protection", value: "Optional coating" },
-      { label: "FR Options", value: "Available" },
-    ],
-    useCases: ["Facade cladding", "Reception walls", "Architectural features", "Canopies"],
-    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
-    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=1200",
-    gallery: [
-      "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=1600",
-    ],
-  },
-  {
-    id: "pvc-boards",
-    title: "PVC Boards / Clean Room Sheets",
-    category: "PVC / Clean Room",
-    short: "Rigid PVC boards for pharma, food units, clean rooms & utilities.",
-    description:
-      "Rigid PVC boards/sheets for hygienic and chemical-resistant interiors. Ideal for clean rooms, pharma, food processing units and utility areas where easy cleaning is critical.",
-    features: [
-      "Easy to clean, hygienic surfaces",
-      "Chemical resistant",
-      "Stable finish & consistency",
-      "Fast installation with trims",
-    ],
-    specs: [
-      { label: "Thickness", value: "3mm – 18mm (custom)" },
-      { label: "Finish", value: "Smooth / Matte" },
-      { label: "Installation", value: "Bonding / Fasteners + trims" },
-      { label: "Cleaning", value: "Low-maintenance" },
-    ],
-    useCases: ["Pharma clean rooms", "Food units", "Lab interiors", "Utility partitions"],
-    badges: ["Hygienic", "Chemical Resistant", "Fast Install"],
-    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=1200",
-    gallery: [
-      "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=1600",
       
     ],
-  },
-  {
-    id: "polycarbonate",
-    title: "Polycarbonate Roofing Sheets",
-    category: "Polycarbonate",
-    short: "Impact resistant roofing, skylights and partitions with UV options.",
-    description:
-      "High impact polycarbonate sheets for roofing, skylights, partitions and protective covers. Ideal where strength, light transmission and safety are required.",
-    features: [
-      "High impact strength",
-      "UV protected options",
-      "Light transmission control",
-      "Weather resistant",
-    ],
-    specs: [
-      { label: "Thickness", value: "1mm – 12mm" },
-      { label: "Type", value: "Solid / Multiwall" },
-      { label: "UV Layer", value: "Optional" },
-      { label: "Colors", value: "Clear / Bronze / Opal" },
-    ],
-    useCases: ["Skylights", "Roofing", "Partitions", "Protective covers"],
-    badges: ["Impact Resistant", "UV Options", "Weather Proof"],
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1600",
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/blo1.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600",
+      "src/coimages/blo2.webp",
+      "src/coimages/blo1.webp",
     ],
   },
   {
-    id: "acrylic",
-    title: "Acrylic Sheets & Fabrication",
-    category: "Acrylic",
-    short: "Display, signage, partitions and custom acrylic fabrication with clean finish.",
+    id: "grp-architectural",
+    title: "Scrubber System",
+    category: "PP FRP",
+    short: "Offering you a complete choice of products which include PP FRP Scrubber System.",
     description:
-      "Premium acrylic sheets and custom acrylic fabrication for signage, displays, partitions and interior applications. Clean edges, polishing and custom forming available.",
+      "",
     features: [
-      "Crystal clear finish options",
-      "Precision cutting & polishing",
-      "Custom bending & forming",
-      "Great for displays & branding",
+      ""
     ],
     specs: [
-      { label: "Thickness", value: "2mm – 20mm" },
-      { label: "Finish", value: "Clear / Frosted / Color" },
-      { label: "Edge", value: "Polished / Matte" },
-      { label: "Work", value: "Cutting / Bending / Bonding" },
+      
     ],
-    useCases: ["Signage", "Retail displays", "Partitions", "Custom covers"],
-    badges: ["Premium Finish", "Custom Forming", "Polished Edges"],
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200",
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/scu1.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=1600",
+      "src/coimages/scu1.webp",
     ],
   },
+
   {
-    id: "custom-fab",
-    title: "Custom Plastic Fabrication",
-    category: "Custom Fabrication",
-    short: "CNC routing, thermoforming, prototyping and turnkey fabrication projects.",
+    id: "grp-architectural",
+    title: "Pp Storage Tank",
+    category: "PP FRP",
+    short: "Providing you the best range of PP Tank For Acid storage with effective & timely delivery.",
     description:
-      "End-to-end custom fabrication: design support, CNC routing, thermoforming, prototyping, assembly and installation. Build exactly to your project requirements.",
+      "",
     features: [
-      "CNC routing & precision cutting",
-      "Thermoforming & vacuum forming",
-      "Prototype to production",
-      "On-site installation available",
+      ""
     ],
     specs: [
-      { label: "Capability", value: "Prototype → Batch → Large Projects" },
-      { label: "Support", value: "Design + Manufacturing" },
-      { label: "Delivery", value: "Pan-India" },
-      { label: "Installation", value: "Optional" },
+      
     ],
-    useCases: ["Industrial components", "Architectural installs", "Machine covers", "Turnkey projects"],
-    badges: ["Turnkey", "Precision", "Fast Turnaround"],
-    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=1600",
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/pp1.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1600",
-      "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=80&w=1600",
+      "src/coimages/pp1.webp",
+    ],
+  }, 
+
+
+  {
+    id: "grp-architectural",
+    title: "Industrial Chemical Tank",
+    category: "PP FRP",
+    short: "We are a leading Manufacturer of Polypropylene Acid storage tank/chemical storage from Mumbai, India.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/cam1.webp",
+    gallery: [
+      "src/coimages/cam1.webp",
+    ],
+  }, 
+
+
+
+  {
+    id: "grp-architectural",
+    title: "FRP Tanks",
+    category: "PP FRP",
+    short: "Prominent & Leading Manufacturer from Mumbai, we offer PP FRP Tanks and PP FRP Chemicals/Oils Kems Electroplating Tanks.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/tank1.webp",
+    gallery: [
+      "src/coimages/tank2.webp",
+      "src/coimages/tank1.webp"
+    ],
+  }, 
+
+
+
+
+  {
+    id: "grp-architectural",
+    title: "FRP Chemical Storage Tanks",
+    category: "PP FRP",
+    short: "Manufacturer of a wide range of products which include FRP Chemical Storage Tanks.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img1.webp",
+    gallery: [
+      "src/coimages/img1.webp",
+    ],
+  }, 
+
+
+
+  {
+    id: "grp-architectural",
+    title: "Exhaust Blowers",
+    category: "PP FRP",
+    short: "Prominent & Leading Manufacturer from Mumbai, we offer PP FRP Exhaust Blowers..",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/blo3.webp",
+    gallery: [
+      "src/coimages/blo3.webp",
+    ],
+  }, 
+
+
+
+
+
+  {
+    id: "grp-architectural",
+    title: "PP Blower",
+    category: "PP FRP",
+    short: "Offering you a complete choice of products which include PP FRP Blower.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/pp2.webp",
+    gallery: [
+      "src/coimages/pp2.webp",
+    ],
+  }, 
+
+
+
+  {
+    id: "grp-architectural",
+    title: "Centrifugal Blowers",
+    category: "PP FRP",
+    short: "Prominent & Leading Manufacturer from Mumbai, we offer PP FRP Centrifugal Blowers.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/blo4.webp",
+    gallery: [
+      "src/coimages/blo4.webp",
+    ],
+  }, 
+
+
+
+
+
+  {
+    id: "grp-architectural",
+    title: "Fume Hoods",
+    category: "PP FRP",
+    short: "Our range of products include Fume Hoods.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/ho1.webp",
+    gallery: [
+      "src/coimages/ho1.webp",
     ],
   },
+
+
+
+
+
+  {
+    id: "grp-architectural",
+    title: "Fiber Reinforced Plastic Storage Tanks",
+    category: "PP FRP",
+    short: "Offering you a complete choice of products which include Fiber Reinforced Plastic Storage Tanks.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img2.webp",
+    gallery: [
+      "src/coimages/img2.webp",
+    ],
+  },
+
+
+  {
+    id: "grp-architectural",
+    title: "Polypropylene Tank",
+    category: "PP FRP",
+    short: "Pioneers in the industry, we offer PP Tank Chemical Electroplating from India.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img3.webp",
+    gallery: [
+      "src/coimages/img3.webp",
+    ],
+  },
+
+
+  {
+    id: "grp-architectural",
+    title: "ETP Plant",
+    category: "PP FRP",
+    short: "We are a leading Manufacturer of PP FRP ETP Plant from Mumbai, India.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/etp1.webp",
+    gallery: [
+      "src/coimages/etp1.webp",
+    ],
+  },
+
+
+  {
+    id: "grp-architectural",
+    title: "Polypropylene storage tanks",
+    category: "PP FRP",
+    short: "Offering you a complete choice of products which include Polypropylene Storage Tanks.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img4.webp",
+    gallery: [
+      "src/coimages/img4.webp",
+    ],
+  },
+
+
+  {
+    id: "grp-architectural",
+    title: "Frp Storage Tanks",
+    category: "PP FRP",
+    short: "We are a leading Manufacturer of PP FRP Sulfuric Acid Storage Tank from Mumbai, India.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img5.webp",
+    gallery: [
+      "src/coimages/img5.webp",
+    ],
+  },
+
+
+  {
+    id: "grp-architectural",
+    title: "PP FRP Lining",
+    category: "PP FRP",
+    short: "Our range of products include PP FRP Lining.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img6.webp",
+    gallery: [
+      "src/coimages/img6.webp",
+    ],
+  },
+
+  {
+    id: "grp-architectural",
+    title: "Frp Lining Services",
+    category: "PP FRP",
+    short: "Our product range includes a wide range of frp lining.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img8.webp",
+    gallery: [
+      "src/coimages/img8.webp",
+    ],
+  },
+
+   {
+    id: "grp-architectural",
+    title: "Frp Lining",
+    category: "PP FRP",
+    short: "We are a leading Manufacturer of FRP Lining from Mumbai, India.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img7.webp",
+    gallery: [
+      "src/coimages/img7.webp",
+    ],
+  },
+
+
+   {
+    id: "grp-architectural",
+    title: "Electroplating Barrel",
+    category: "PP FRP",
+    short: "We are a leading Manufacturer of Polypropylene Barrel used for Electroplating Tank from Mumbai, India.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img9.webp",
+    gallery: [
+      "src/coimages/img9.webp",
+    ],
+  },
+
+
+   {
+    id: "grp-architectural",
+    title: "Frp Sheet And Tank",
+    category: "PP FRP",
+    short: "Providing you the best range of Frp Tanks with effective & timely delivery.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img10.webp",
+    gallery: [
+      "src/coimages/img10.webp",
+    ],
+  }, 
+
+
+   {
+    id: "grp-architectural",
+    title: "Frp Ducting",
+    category: "PP FRP",
+    short: "Offering you a complete choice of products which include FRP Ducting.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img11.webp",
+    gallery: [
+      "src/coimages/img11.webp",
+    ],
+  },
+
+
+
+   {
+    id: "grp-architectural",
+    title: "PP Impeller",
+    category: "PP FRP",
+    short: "Pioneers in the industry, we offer Pp FRP Impeller from India.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img12.webp",
+    gallery: [
+      "src/coimages/img12.webp",
+    ],
+  }, 
+
+
+
+   {
+    id: "grp-architectural",
+    title: "Sealless Centrifugal Pump",
+    category: "PP FRP",
+    short: "Leading Manufacturer of Pollypropylene Magnetic Pump chemical filter from Mumbai.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img13.webp",
+    gallery: [
+      "src/coimages/img13.webp",
+    ],
+  },
+
+
+
+
+
+   {
+    id: "grp-architectural",
+    title: "Laboratory Hoods",
+    category: "PP FRP",
+    short: "Prominent & Leading Manufacturer from Mumbai, we offer Laboratory Hoods.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img14.webp",
+    gallery: [
+      "src/coimages/img14.webp",
+    ],
+  },
+
+
+
+   {
+    id: "grp-architectural",
+    title: "PP FRP Coating",
+    category: "PP FRP",
+    short: "Leading Manufacturer of FRP Coating from Mumbai.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img15.webp",
+    gallery: [
+      "src/coimages/img15.webp",
+    ],
+  },
+
+
+
+   {
+    id: "grp-architectural",
+    title: "New Items/PP Vertical Pump",
+    category: "PP FRP",
+    short: "Manufacturer of a wide range of products which include PP Vertical Pump.",
+    description:
+      "",
+    features: [
+      ""
+    ],
+    specs: [
+      
+    ],
+    useCases: [],
+    badges: ["Architectural Grade", "UV Options", "Custom Texture"],
+    image: "src/coimages/img16.webp",
+    gallery: [
+      "src/coimages/img16.webp",
+    ],
+  },
+
+
+
+
+
+
+
+  
+  
 ];
 
 // ── PAGE ────────────────────────────────────────────────────────────────────
@@ -1416,9 +1868,9 @@ export default function Products() {
         }}
       >
         <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
-          <span style={row}><MapPin size={14} color={COLORS.gold} /> Sector 4, Mumbai</span>
+          <span style={row}><MapPin size={14} color={COLORS.gold} /> 46,appa pada,,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai-400097, Maharashtra, India</span>
           <span style={row}><Mail size={14} color={COLORS.gold} /> info@devplactics.com</span>
-          <span style={row}><Phone size={14} color={COLORS.gold} /> +91 98765 43210</span>
+          <span style={row}><Phone size={14} color={COLORS.gold} />+91 8043887774</span>
         </div>
         <div style={{ display: "flex", gap: "12px" }}>
           <Facebook size={14} style={{ cursor: "pointer" }} />
@@ -1445,14 +1897,17 @@ export default function Products() {
           flexWrap: "wrap",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <span style={{ fontSize: "28px", fontWeight: "800", lineHeight: 1 }}>
-            DEV<span className="text-gold">PLASTICS</span>
-          </span>
-          <span style={{ fontSize: "9px", letterSpacing: "3px", textTransform: "uppercase", color: "#888" }}>
-            Plastic Fabrication
-          </span>
-        </div>
+         <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "100px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
 
         <div
           className="nav-links-desktop"
@@ -1470,20 +1925,20 @@ export default function Products() {
           </Link>
 
           <Link to="/products" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>
-            Products
-          </Link>
-
-          <Link to="/services" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>
             Services
           </Link>
+
+          {/* <Link to="/services" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>
+            Services
+          </Link> */}
 
           <Link to="/about" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>
             About
           </Link>
 
-          <Link to="/gallery" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>
+           <Link to="/gallery" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>
             Gallery
-          </Link>
+          </Link> 
 
           <Link to="/contact" className="nav-link" style={{ color: "#333", textDecoration: "none" }}>
             Contact
@@ -1527,14 +1982,17 @@ export default function Products() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="mobile-drawer-header">
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <span style={{ fontSize: "20px", fontWeight: 900, lineHeight: 1 }}>
-                    DEV<span style={{ color: COLORS.gold }}>PLASTICS</span>
-                  </span>
-                  <span style={{ fontSize: "9px", letterSpacing: "3px", textTransform: "uppercase", color: "#888" }}>
-                    Plastic Fabrication
-                  </span>
-                </div>
+                 <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "48px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
 
                 <button
                   className="mobile-menu-btn"
@@ -1547,10 +2005,10 @@ export default function Products() {
 
               <div className="mobile-nav">
                 <Link to="/" onClick={closeMobileMenu}>Home</Link>
-                <Link to="/products" className="active" onClick={closeMobileMenu}>Products</Link>
-                <Link to="/services" onClick={closeMobileMenu}>Services</Link>
+                <Link to="/products" className="active" onClick={closeMobileMenu}>Services</Link>
+                {/* <Link to="/services" onClick={closeMobileMenu}>Services</Link> */}
                 <Link to="/about" onClick={closeMobileMenu}>About</Link>
-                <Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link>
+                 <Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link>
                 <Link to="/contact" onClick={closeMobileMenu}>Contact</Link>
               </div>
 
@@ -1635,11 +2093,11 @@ export default function Products() {
             Explore Our <span className="text-gold">Products</span>
           </h1>
           <p style={{ fontSize: 18, opacity: 0.92, maxWidth: 680, marginBottom: 28 }}>
-            FRP / GRP panels, PVC clean-room sheets, polycarbonate roofing, acrylic fabrication and turnkey custom projects — all built with precision.
+Storage Tank, FRP Blowers , Industrial Chemical Tank, Centrifugal Blowers , Fume Hoods , Polypropylene Tank and custom projects — all built with precision.
           </p>
 
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(255,255,255,0.10)", border: "1px solid rgba(255,255,255,0.18)", padding: "12px 14px", borderRadius: 10, minWidth: 320 }}>
+            {/* <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(255,255,255,0.10)", border: "1px solid rgba(255,255,255,0.18)", padding: "12px 14px", borderRadius: 10, minWidth: 320 }}>
               <Search size={18} />
               <input
                 value={query}
@@ -1654,9 +2112,9 @@ export default function Products() {
                   fontSize: 14,
                 }}
               />
-            </div>
+            </div> */}
 
-            <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(255,255,255,0.10)", border: "1px solid rgba(255,255,255,0.18)", padding: "12px 14px", borderRadius: 10 }}>
+            {/* <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(255,255,255,0.10)", border: "1px solid rgba(255,255,255,0.18)", padding: "12px 14px", borderRadius: 10 }}>
               <Filter size={18} />
               <select
                 value={category}
@@ -1676,15 +2134,15 @@ export default function Products() {
                   </option>
                 ))}
               </select>
-            </div>
+            </div> */}
 
-            <button
+            {/* <button
               style={{ ...btn, backgroundColor: "transparent", border: `1px solid ${COLORS.gold}`, color: "white" }}
               className="btn-hover"
               onClick={resetFilters}
             >
               Reset
-            </button>
+            </button> */}
           </div>
 
           <div style={{ display: "flex", gap: 18, flexWrap: "wrap", marginTop: 22, opacity: 0.95 }}>
@@ -1701,7 +2159,7 @@ export default function Products() {
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 20, flexWrap: "wrap", marginBottom: 28 }}>
           <div>
             <span style={smallHeading}>Catalog</span>
-            <h2 style={bigHeading}>Our Product Range</h2>
+            <h2 style={bigHeading}>Our Product </h2>
             <p style={{ color: COLORS.lightText, maxWidth: 720, fontSize: 16 }}>
               Click any product to view details, specs, use-cases and image gallery.
             </p>
@@ -1761,9 +2219,9 @@ export default function Products() {
                       <Star key={i} size={14} fill="currentColor" />
                     ))}
                   </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, color: COLORS.gold, fontWeight: 900, fontSize: 13 }}>
+                  {/* <div style={{ display: "flex", alignItems: "center", gap: 8, color: COLORS.gold, fontWeight: 900, fontSize: 13 }}>
                     View Details <ChevronRight size={16} />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </motion.div>
@@ -1799,14 +2257,17 @@ export default function Products() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "50px", marginBottom: "60px" }}>
             <div>
-              <div style={{ display: "flex", flexDirection: "column", marginBottom: "20px" }}>
-                <span style={{ fontSize: "32px", fontWeight: "800", color: "white" }}>
-                  DEV<span className="text-gold">PLASTICS</span>
-                </span>
-                <span style={{ fontSize: "10px", letterSpacing: "4px", textTransform: "uppercase", color: "#888" }}>
-                  Fabrication
-                </span>
-              </div>
+               <div style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/src/coimages/logo.jpg"
+    alt="Dev Plastics Logo"
+    style={{
+      height: "100px",
+      width: "auto",
+      objectFit: "contain",
+    }}
+  />
+</div>
               <p style={{ lineHeight: 1.7, marginBottom: "20px" }}>
                 Precision plastic fabrication solutions for industrial, commercial, and architectural applications since 2008.
               </p>
@@ -1829,19 +2290,24 @@ export default function Products() {
 
                 <li style={{ marginBottom: "12px" }}>
                   <Link to="/products" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>
-                    Products
-                  </Link>
-                </li>
-
-                <li style={{ marginBottom: "12px" }}>
-                  <Link to="/services" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>
                     Services
                   </Link>
                 </li>
 
+                {/* <li style={{ marginBottom: "12px" }}>
+                  <Link to="/services" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>
+                    Services
+                  </Link>
+                </li> */}
+
                 <li>
                   <Link to="/contact" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>
                     Contact
+                  </Link>
+                </li>
+                 <li>
+                  <Link to="/gallery" className="nav-link" style={{ color: "#ccc", textDecoration: "none" }}>
+                    Gallery
                   </Link>
                 </li>
               </ul>
@@ -1850,8 +2316,8 @@ export default function Products() {
             <div>
               <h4 style={{ color: "white", fontSize: "16px", marginBottom: "20px", fontWeight: "700" }}>Contact Info</h4>
               <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
-                <div style={row}><MapPin size={16} color={COLORS.gold} /><span>Sector 4, Industrial Area, Mumbai - 400072</span></div>
-                <div style={row}><Phone size={16} color={COLORS.gold} /><span>+91 98765 43210</span></div>
+                <div style={row}><MapPin size={16} color={COLORS.gold} /><span>46,appa pada,,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai-400097, Maharashtra, India</span></div>
+                <div style={row}><Phone size={16} color={COLORS.gold} /><span>++91 8043887774</span></div>
                 <div style={row}><Mail size={16} color={COLORS.gold} /><span>info@devplastics.com</span></div>
               </div>
             </div>

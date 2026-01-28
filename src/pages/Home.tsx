@@ -906,7 +906,7 @@ const Home = () => {
       {/* ================= END ABOUT SECTION ================= */}
 
       {/* NEW: MATERIALS WE FABRICATE SECTION */}
-      <motion.section id="materials" className="section-hover" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={staggerChildren} style={{ ...sectionStyle, backgroundColor: COLORS.bgLight }}>
+      <motion.section id="materials" className="section-hover light-section" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={staggerChildren} style={{ ...sectionStyle, backgroundColor: COLORS.bgLight }}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <motion.span variants={fadeIn} style={headingSmall}>Our Services</motion.span>
           <motion.h2 variants={fadeInUp} style={headingLarge}>Industries We Serve</motion.h2>

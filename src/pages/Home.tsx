@@ -467,6 +467,17 @@ const Home = () => {
           }
           .hero-title { font-size: 2.05rem !important; }
         }
+          /* 🔒 FORCE TEXT VISIBILITY (HOME PAGE ONLY) */
+
+
+.section-hover {
+  color: inherit;
+}
+/* Light sections ke cards ke liye */
+.light-section .card-glow * {
+  color: #222;
+}
+
       `}} />
 
       {/* TOP BAR */}
@@ -925,7 +936,7 @@ const Home = () => {
               </div>
               <div style={{ padding: '25px' }}>
                 <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px', color: COLORS.dark }}>{material.name}</h3>
-                <p style={{ color: COLORS.lightText, marginBottom: '15px', fontSize: '14px' }}>{material.desc}</p>
+                <p style={{ color: '#555', marginBottom: '15px', fontSize: '14px' }}>{material.desc}</p>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   {material.features.map((feature, fIdx) => (
                     <li key={fIdx} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', fontSize: '13px' }}>
@@ -1039,7 +1050,16 @@ const Home = () => {
               <motion.div {...iconHover} style={{ display: "inline-flex", marginBottom: 12 }}>
                 <Shield size={32} color={COLORS.gold} />
               </motion.div>
-              <span style={{ fontWeight: '600', fontSize: '14px' }}>{cert}</span>
+              <span
+  style={{
+    fontWeight: '600',
+    fontSize: '14px',
+    color: '#222'   // ✅ FIX
+  }}
+>
+  {cert}
+</span>
+
             </motion.div>
           ))}
         </div>

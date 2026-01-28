@@ -2366,6 +2366,7 @@ Storage Tank, FRP Blowers , Industrial Chemical Tank, Centrifugal Blowers , Fume
                 background: "white",
                 borderRadius: 16,
                 border: "1px solid rgba(255,255,255,0.2)",
+                color: "#111"  
               }}
               onClick={(e) => e.stopPropagation()}
             >
@@ -2433,7 +2434,7 @@ Storage Tank, FRP Blowers , Industrial Chemical Tank, Centrifugal Blowers , Fume
                   </div>
 
                   <div style={{ marginTop: 16, padding: 16, border: "1px solid #eee", borderRadius: 14, background: COLORS.bgLight }}>
-                    <div style={{ fontWeight: 900, marginBottom: 10 }}>Key Features</div>
+                    <div style={{ fontWeight: 900, marginBottom: 10 ,color: "#111" }}>Key Features</div>
                     <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                       {active.features.map((f) => (
                         <div key={f} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
@@ -2445,7 +2446,7 @@ Storage Tank, FRP Blowers , Industrial Chemical Tank, Centrifugal Blowers , Fume
                   </div>
 
                   <div style={{ marginTop: 16, padding: 16, border: "1px solid #eee", borderRadius: 14 }}>
-                    <div style={{ fontWeight: 900, marginBottom: 10 }}>Specs</div>
+                    <div style={{ fontWeight: 900, marginBottom: 10,color: "#111"  }}>Specs</div>
                     <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                       {active.specs.map((s) => (
                         <div key={s.label} style={{ display: "flex", justifyContent: "space-between", gap: 16, fontSize: 14 }}>
@@ -2457,7 +2458,7 @@ Storage Tank, FRP Blowers , Industrial Chemical Tank, Centrifugal Blowers , Fume
                   </div>
 
                   <div style={{ marginTop: 16, padding: 16, border: "1px solid #eee", borderRadius: 14 }}>
-                    <div style={{ fontWeight: 900, marginBottom: 10 }}>Use Cases</div>
+                    <div style={{ fontWeight: 900, marginBottom: 10,color: "#111"  }}>Use Cases</div>
                     <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                       {active.useCases.map((u) => (
                         <span key={u} style={{ ...chip, background: "#fff" }}>{u}</span>

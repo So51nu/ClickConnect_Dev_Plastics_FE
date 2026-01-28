@@ -358,6 +358,9 @@ const input: React.CSSProperties = {
   outline: "none",
   fontSize: 14,
   minWidth: 0,
+  background: "#fff",
+  color: "#111",          // ✅ FIX
+  caretColor: "#111",
 };
 
 const inputSmall: React.CSSProperties = {
@@ -368,6 +371,9 @@ const inputSmall: React.CSSProperties = {
   outline: "none",
   fontSize: 13,
   minWidth: 140,
+  background: "#fff",
+  color: "#111",          // ✅ FIX
+  caretColor: "#111",
 };
 
 const textarea: React.CSSProperties = {
@@ -380,6 +386,9 @@ const textarea: React.CSSProperties = {
   minWidth: 220,
   minHeight: 44,
   resize: "vertical",
+  background: "#fff",
+  color: "#111",          // ✅ FIX
+  caretColor: "#111",
 };
 
 const btn: React.CSSProperties = {

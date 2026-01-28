@@ -174,6 +174,54 @@ export default function AdminDashboard() {
             @media (min-width: 900px) {
               .admin-filters { grid-template-columns: 1.4fr 0.6fr 0.3fr; }
             }
+              /* ===============================
+   ADMIN DASHBOARD FORCE COLORS
+   =============================== */
+
+.admin-container,
+.admin-container * {
+  color: #111 !important;
+}
+
+/* Inputs / selects / textarea */
+.admin-container input,
+.admin-container select,
+.admin-container textarea {
+  background: #fff !important;
+  color: #111 !important;
+  caret-color: #111 !important;
+}
+
+/* Placeholder */
+.admin-container ::placeholder {
+  color: #888 !important;
+  opacity: 1;
+}
+
+/* Buttons */
+.admin-container button {
+  color: #111 !important;
+}
+
+/* Primary button override */
+.admin-container button[style*="background: #a37f57"],
+.admin-container button[style*="background:#a37f57"] {
+  color: #fff !important;
+}
+
+/* Table */
+.admin-container table,
+.admin-container th,
+.admin-container td {
+  color: #111 !important;
+}
+
+/* Dropdown options */
+.admin-container option {
+  color: #111 !important;
+  background: #fff !important;
+}
+
           `,
         }}
       />
@@ -409,6 +457,7 @@ const btnOutline: React.CSSProperties = {
   cursor: "pointer",
   fontWeight: 900,
   background: "white",
+  color: "#111", //
 };
 
 const btnSmall: React.CSSProperties = {
@@ -418,6 +467,7 @@ const btnSmall: React.CSSProperties = {
   cursor: "pointer",
   fontWeight: 800,
   background: "white",
+  color: "#111", //
 };
 
 const errBox: React.CSSProperties = {

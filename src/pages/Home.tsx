@@ -1648,11 +1648,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin,
   Search, CheckCircle,
-  Settings, Truck, Users, Clock, Award, Star,
-  Shield, Factory, Thermometer, Zap,
+  Settings,Users, Clock, Award, Star,
+  Shield, Factory,
   ChevronLeft, ChevronRight, Play, Pause,
-  Quote, Gauge, HardHat,
-  Menu, X
+  Quote, Gauge,
+  Menu, X,Wind,
 } from 'lucide-react';
 
 // ── GLOBAL CONSTANTS ────────────────────────────────────────────────────────
@@ -1858,14 +1858,41 @@ const Home = () => {
     }
   ];
 
-  const applications = [
-    { icon: <Factory />, title: "Industrial Cladding", desc: "Factory walls, partitions, utilities" },
-    { icon: <HardHat />, title: "Construction", desc: "False ceilings, wall panels" },
-    { icon: <Truck />, title: "Transportation", desc: "Bus & truck interiors, coverings" },
-    { icon: <Shield />, title: "Clean Rooms", desc: "Pharma / food-grade interiors" },
-    { icon: <Thermometer />, title: "Cold Storage", desc: "Insulated panels & partitions" },
-    { icon: <Zap />, title: "Electrical", desc: "Cable trays, enclosures, covers" }
-  ];
+  // const applications = [
+  //   { icon: <Factory />, title: "Industrial Cladding", desc: "Factory walls, partitions, utilities" },
+  //   { icon: <HardHat />, title: "Construction", desc: "False ceilings, wall panels" },
+  //   { icon: <Truck />, title: "Transportation", desc: "Bus & truck interiors, coverings" },
+  //   { icon: <Shield />, title: "Clean Rooms", desc: "Pharma / food-grade interiors" },
+  //   { icon: <Thermometer />, title: "Cold Storage", desc: "Insulated panels & partitions" },
+  //   { icon: <Zap />, title: "Electrical", desc: "Cable trays, enclosures, covers" }
+  // ];
+  const teamMembers = [
+  {
+    name: "Rakesh Patel",
+    title: "Senior FRP Fabrication Engineer",
+    img: "src/images/team.png",
+    desc: "10+ years experience in FRP tanks, scrubbers and industrial vessels."
+  },
+  {
+    name: "Amit Sharma",
+    title: "Project & Site Supervisor",
+    img: "src/images/team.png",
+    desc: "Handles on-site installation, quality checks and project timelines."
+  },
+  {
+    name: "Sanjay Verma",
+    title: "PP / FRP Design Specialist",
+    img: "src/images/team.png",
+    desc: "Expert in custom design of PP vessels, ducting and lining solutions."
+  },
+  {
+    name: "Kunal Yadav",
+    title: "Quality & Safety Manager",
+    img: "src/images/team.png",
+    desc: "Ensures safety standards, material quality and final inspection."
+  }
+];
+
 
   const certifications = [
     "Fire Safety Certified",
@@ -2100,7 +2127,7 @@ const Home = () => {
         }}
       >
         <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
-          <span style={flexRow}><MapPin size={14} color={COLORS.gold} /> 46,appa pada,,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai-400097, Maharashtra, India</span>
+          <span style={flexRow}><MapPin size={14} color={COLORS.gold} /> 46,appa pada,kurar village 166/2, Ramchandra Vishwakarma Chawl Rajawali,401208,Vasai, Mumbai-400097, Maharashtra, India</span>
           <span style={flexRow}><Mail size={14} color={COLORS.gold} /> info@devplastic.com</span>
           <span style={flexRow}><Phone size={14} color={COLORS.gold} /> +91 8043887774</span>
         </div>
@@ -2298,19 +2325,22 @@ const Home = () => {
           style={{ position: "relative", zIndex: 2, color: "white", padding: "0 5%", maxWidth: "800px", width: "100%" }}
         >
           <p style={{ borderLeft: `4px solid ${COLORS.gold}`, paddingLeft: '15px', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '14px', marginBottom: '20px' }}>
-            Precision Company • FRP • Industrial Solutions
+            CP • FRP • Industrial Solutions
           </p>
           <h1 className="hero-title" style={{ fontSize: '56px', fontWeight: '800', lineHeight: '1.1', marginBottom: '25px' }}>
-            Advanced <span className="text-gold">Plastic & FRP Company</span> <br /> For Modern Industry
+           CP.FRP.Industrial Tank.<span className="text-gold">Vessel Shell.EPP Plant.Scrubbing System</span> <br /> Blower.Duct.SRP Lining Etc.
           </h1>
           <p style={{ fontSize: '18px', marginBottom: '35px', opacity: 0.9, maxWidth: '600px' }}>
-            We specialize in high-quality FRP, GRP, PVC Company with precision engineering for industrial, commercial, and architectural applications.
+           PP, EPP , Chemical Related Industrial Products Etc.
           </p>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+          <Link to="/products" style={{ textDecoration: "none" }}>
             <motion.button {...hoverSoft} style={{ ...btnStyle }} className="btn-hover">
-              Explore Products
+              Explore Services
             </motion.button>
-          </div>
+          </Link>
+        </div>
+
         </motion.div>
 
         <div className="carousel-controls" style={{ position: "absolute", bottom: "40px", left: "50%", transform: "translateX(-50%)", zIndex: 3, display: "flex", alignItems: "center", gap: "20px" }}>
@@ -2388,7 +2418,7 @@ const Home = () => {
             transition={{ duration: 0.6 }}
           >
             <img
-              src="src/ai_images/img.png"
+              src="src/ai_images/image2.png"
               alt="Industrial Facility"
               style={{
                 width: "100%",
@@ -2425,7 +2455,7 @@ const Home = () => {
                 lineHeight: 1.3,
               }}
             >
-              Reliable Plastic & FRP Fabrication Solutions
+              Leading Manufacturer of FRP, PP & Industrial Plastic Equipment
             </h2>
 
             <p
@@ -2461,16 +2491,19 @@ const Home = () => {
               performance standards.
             </p>
 
-            <motion.button
-              {...hoverSoft}
-              style={{
-                ...btnStyle,
-                padding: "14px 40px",
-              }}
-              className="btn-hover"
-            >
-              Learn More
-            </motion.button>
+            <Link to="/gallery" style={{ textDecoration: "none" }}>
+              <motion.button
+                {...hoverSoft}
+                style={{
+                  ...btnStyle,
+                  padding: "14px 40px",
+                }}
+                className="btn-hover"
+              >
+                Learn More
+              </motion.button>
+            </Link>
+
           </motion.div>
         </div>
       </motion.section>
@@ -2525,12 +2558,14 @@ const Home = () => {
       </motion.section>
 
       {/* APPLICATIONS SECTION */}
-      <motion.section className="section-hover" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={staggerChildren} style={{ ...sectionStyle, backgroundColor: COLORS.dark, color: 'white' }}>
+      {/* <motion.section className="section-hover" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={staggerChildren} style={{ ...sectionStyle, backgroundColor: COLORS.dark, color: 'white' }}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <motion.span variants={fadeIn} style={{ ...headingSmall, color: COLORS.gold }}>Industries</motion.span>
-          <motion.h2 variants={fadeInUp} style={{ ...headingLarge, color: 'white' }}>Our Applications</motion.h2>
+          <motion.span variants={fadeIn} style={{ ...headingSmall, color: COLORS.gold }}></motion.span>
+          <motion.h2 variants={fadeInUp} style={{ ...headingLarge, color: 'white' }}>Our Team</motion.h2>
           <motion.p variants={fadeIn} style={{ maxWidth: '700px', margin: '0 auto', color: '#aaa' }}>
-            We serve various industries with custom plastic fabrication solutions
+            Our strength lies in our experienced and dedicated team of engineers, fabricators and site technicians who bring precision,
+             safety and quality to every project. With hands-on expertise in FRP, PP and industrial plastic fabrication, 
+            our team ensures that each product is manufactured as per industry standards and client specifications.
           </motion.p>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "30px" }}>
@@ -2555,13 +2590,92 @@ const Home = () => {
             </motion.div>
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
+
+      <motion.section
+  className="section-hover"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  variants={staggerChildren}
+  style={{ ...sectionStyle, backgroundColor: COLORS.dark, color: 'white' }}
+>
+  <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+    <motion.span variants={fadeIn} style={{ ...headingSmall, color: COLORS.gold }}>
+      Our Experts
+    </motion.span>
+    <motion.h2 variants={fadeInUp} style={{ ...headingLarge, color: 'white' }}>
+      Our Team
+    </motion.h2>
+    <motion.p
+      variants={fadeIn}
+      style={{ maxWidth: '750px', margin: '0 auto', color: '#aaa' }}
+    >
+      Our strength lies in our experienced and dedicated team of engineers, fabricators and site technicians who bring precision,
+      safety and quality to every project. With hands-on expertise in FRP, PP and industrial plastic fabrication,
+      our team ensures reliable execution as per industry standards.
+    </motion.p>
+  </div>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+      gap: "30px"
+    }}
+  >
+    {teamMembers.map((member, idx) => (
+      <motion.div
+        key={idx}
+        variants={fadeInUp}
+        whileHover={{ y: -10, boxShadow: "0 22px 45px rgba(0,0,0,0.35)" }}
+        transition={{ duration: 0.35, ease: "easeOut" }}
+        style={{
+          backgroundColor: '#222',
+          borderRadius: '10px',
+          overflow: 'hidden',
+          textAlign: 'center',
+          border: "1px solid #2b2b2b"
+        }}
+        className="card-glow"
+      >
+        {/* Image */}
+        <div style={{ width: "100%", height: "260px", overflow: "hidden" }}>
+          <motion.img
+            src={member.img}
+            alt={member.name}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            whileHover={{ scale: 1.08 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          />
+        </div>
+
+        {/* Content */}
+        <div style={{ padding: "22px" }}>
+          <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '6px', color: "#fff" }}>
+            {member.name}
+          </h3>
+          <p style={{ fontSize: '13px', color: COLORS.gold, marginBottom: '10px', fontWeight: '600' }}>
+            {member.title}
+          </p>
+          <p style={{ color: '#aaa', fontSize: '13px', lineHeight: '1.6' }}>
+            {member.desc}
+          </p>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</motion.section>
+
 
       {/* CERTIFICATIONS SECTION */}
       <motion.section className="section-hover" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={staggerChildren} style={sectionStyle}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <motion.span variants={fadeIn} style={headingSmall}>Quality Assurance</motion.span>
-          <motion.h2 variants={fadeInUp} style={headingLarge}>Certifications & Standards</motion.h2>
+         <motion.h2 variants={fadeInUp} style={{ ...headingLarge, color: "#fff" }}>
+          Certifications & Standards
+        </motion.h2>
+
           <motion.p variants={fadeIn} style={{ maxWidth: '700px', margin: '0 auto', color: COLORS.lightText }}>
             We maintain the highest quality standards in all our fabrication processes
           </motion.p>
@@ -2599,7 +2713,10 @@ const Home = () => {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px', flexWrap: 'wrap', gap: '20px' }}>
           <div>
             <span style={headingSmall}>Our Work</span>
-            <h2 style={{ ...headingLarge, marginBottom: 0 }}>Recent Works</h2>
+            <h2 style={{ ...headingLarge, marginBottom: 0, color: "#fff" }}>
+              Recent Works
+            </h2>
+
           </div>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "30px" }} className="grid-responsive">
@@ -2630,10 +2747,30 @@ const Home = () => {
           <motion.h2 variants={fadeInUp} style={headingLarge}>Advanced Fabrication Equipment</motion.h2>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "30px" }}>
-          <TechCard title="CNC Routing Machines" desc="High-precision computer-controlled routing for complex shapes" icon={<Settings />} />
-          <TechCard title="Thermoforming Equipment" desc="Heat-based forming for consistent plastic molding" icon={<Thermometer />} />
-          <TechCard title="Laser Cutting Systems" desc="Precision laser cutting for clean edges and intricate designs" icon={<Zap />} />
-          <TechCard title="Vacuum Forming Presses" desc="Large-scale vacuum forming for architectural panels" icon={<Gauge />} />
+         <TechCard
+  title="ETP Tanks"
+  desc="Fabrication of ETP tanks for effluent & sewage treatment plants with corrosion-resistant lining."
+  icon={<Factory />}
+/>
+
+          <TechCard
+  title="SRP Lining"
+  desc="Protective SRP lining for  tanks, pits and ducts to prevent chemical corrosion and leakage."
+  icon={<Shield />}
+/>
+
+<TechCard
+  title="Scrubbing Systems"
+  desc="Design and fabrication of  scrubbers and ducting for air pollution control and fume extraction."
+  icon={<Wind />}
+/>
+
+<TechCard
+  title="ETP / SRP Blowers "
+  desc="High-performance centrifugal blowers for ETP/SRP plants and industrial ventilation systems."
+  icon={<Gauge />}
+/>
+
         </div>
       </motion.section>
 
@@ -2641,7 +2778,10 @@ const Home = () => {
       <motion.section className="section-hover" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={staggerChildren} style={sectionStyle}>
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
           <motion.span variants={fadeIn} style={headingSmall}>Why Choose Us</motion.span>
-          <motion.h2 variants={fadeInUp} style={headingLarge}>Why Dev Plastics?</motion.h2>
+          <motion.h2 variants={fadeInUp} style={{ ...headingLarge, color: "#fff" }}>
+            Why Dev Plastics?
+          </motion.h2>
+
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "50px", alignItems: 'center' }} className="grid-responsive">
           <motion.div variants={fadeInUp} style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
@@ -2848,11 +2988,13 @@ const Home = () => {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                   <MapPin size={16} color={COLORS.gold} />
-                  <span>Sector 4, Industrial Area, Mumbai - 400072</span>
+                  <span>46,appa pada,kurar village 166/2, 
+                  Ramchandra Vishwakarma Chawl Rajawali,401208,
+                  Vasai, Mumbai-400097, Maharashtra, India</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <Phone size={16} color={COLORS.gold} />
-                  <span>+91 98765 43210</span>
+                  <span>+91 8043887774</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <Mail size={16} color={COLORS.gold} />
@@ -2905,18 +3047,36 @@ const grid3 = { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(3
 const TechCard = ({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) => (
   <motion.div
     variants={fadeInUp}
-    whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
+    whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(0,0,0,0.35)" }}
     transition={{ duration: 0.35, ease: "easeOut" }}
-    style={{ backgroundColor: "white", padding: "30px", borderRadius: "8px", boxShadow: "0 5px 15px rgba(0,0,0,0.05)", border: "1px solid #eee" }}
+    style={{
+      backgroundColor: "#222",
+      padding: "30px",
+      borderRadius: "8px",
+      border: "1px solid #2b2b2b",
+      textAlign: "center"
+    }}
     className="card-glow"
   >
-    <motion.div className="text-gold" style={{ marginBottom: '20px' }} whileHover={{ scale: 1.08, rotate: -2 }} transition={{ duration: 0.25 }}>
-      {React.cloneElement(icon as any, { size: 36 })}
+    <motion.div
+      className="text-gold"
+      style={{ marginBottom: '20px', display: "flex", justifyContent: "center" }}
+      whileHover={{ scale: 1.08, rotate: -2 }}
+      transition={{ duration: 0.25 }}
+    >
+      {React.cloneElement(icon as any, { size: 36, color: COLORS.gold })}
     </motion.div>
-    <h3 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '10px' }}>{title}</h3>
-    <p style={{ color: COLORS.lightText, fontSize: '14px', lineHeight: '1.6' }}>{desc}</p>
+
+    <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '10px', color: "#fff" }}>
+      {title}
+    </h3>
+
+    <p style={{ color: '#ccc', fontSize: '14px', lineHeight: '1.6' }}>
+      {desc}
+    </p>
   </motion.div>
 );
+
 
 const ProjectCard = ({ img, title, cat }: { img: string; title: string; cat: string }) => (
   <motion.div variants={fadeInUp} whileHover={{ y: -6 }} transition={{ duration: 0.35, ease: "easeOut" }}>

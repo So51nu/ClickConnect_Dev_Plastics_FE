@@ -2325,10 +2325,10 @@ const Home = () => {
           style={{ position: "relative", zIndex: 2, color: "white", padding: "0 5%", maxWidth: "800px", width: "100%" }}
         >
           <p style={{ borderLeft: `4px solid ${COLORS.gold}`, paddingLeft: '15px', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '14px', marginBottom: '20px' }}>
-            CP • FRP • Industrial Solutions
+            PP • FRP • Industrial Solutions
           </p>
           <h1 className="hero-title" style={{ fontSize: '56px', fontWeight: '800', lineHeight: '1.1', marginBottom: '25px' }}>
-           CP.FRP.Industrial Tank.<span className="text-gold">Vessel Shell.EPP Plant.Scrubbing System</span> <br /> Blower.Duct.SRP Lining Etc.
+           PP.FRP.Industrial Tank.<span className="text-gold">Vessel Shell.EPP Plant.Scrubbing System</span> <br /> Blower.Duct.SRP Lining Etc.
           </h1>
           <p style={{ fontSize: '18px', marginBottom: '35px', opacity: 0.9, maxWidth: '600px' }}>
            PP, EPP , Chemical Related Industrial Products Etc.
